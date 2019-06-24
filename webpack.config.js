@@ -5,7 +5,7 @@ const dist = path.join(__dirname, "static/dist");
 
 module.exports = {
 	mode: "development", // "production"
-	entry: path.resolve(src, "ts/aho.ts"),
+	entry: path.resolve(src, "ts/foo.ts"),
 	output: {
 		filename: "index.bundle.js",
 		path: dist
