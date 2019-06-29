@@ -10,7 +10,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "//": "build:js\": \"babel static/ts --out-dir static/dist --extensions \".ts,.tsx\" --source-maps inline",
     "build:js": "webpack",
-    "postinstall": ""
+    "start": "webpack-dev-server -d"
   },
   "author": "Tomotaka Ogino",
   "license": "ISC",
