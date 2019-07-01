@@ -118,3 +118,4 @@ node_modules/
 
 # webpack builds
 static/dist/
+package-lock.json
