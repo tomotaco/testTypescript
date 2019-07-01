@@ -1,3 +1,5 @@
+import $ from "jquery"
+
 export class Bar
 {
 	val: number;
@@ -11,3 +13,5 @@ export class Bar
 		this.val = v;
 	}
 }
+
+$("#result2").text("jQuery in bar executed");
