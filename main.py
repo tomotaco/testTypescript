@@ -19,12 +19,16 @@ logger.debug("hostname={0}, port_number={1}".format(hostname, port_number))
 TEMPLATE_PATH.append("/views")
 BASE_DIR = path.dirname(path.abspath(__file__))
 
+webpack_dev_server = env.get("WEBPACK_DEV_SERVER", "0")
+front_end_url = "http://localhost:8080" if webpack_dev_server == "1" else "/dist"
+
+logger.debug("webpack_dev_server={0}, front_end_url={1}".format(webpack_dev_server, front_end_url))
 
 root_app = Bottle()
 
 @root_app.route("/")
 def index():
-    return template('index')
+    return template('index', frontEndUrl=front_end_url)
 
 @root_app.route('/js/<filename>')
 def js_dir(filename):
